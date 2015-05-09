@@ -1,4 +1,4 @@
-(defproject cnds-scrape "0.2.0-SNAPSHOT"
+(defproject cnds-scrape "0.3.0"
   :description "Temporary lib until cnscrape has all the scrapers"
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
