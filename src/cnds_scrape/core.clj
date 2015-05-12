@@ -8,7 +8,15 @@
   [url]
   (try
     (case (clojure.string/replace url #"^.*[/\.]([^\.]+)\.com/.*" "$1")
-      ("allure" "arstechnica" "cntraveler" "style" "teenvogue" "vanityfair" "wired" "wmagazine") (cns/scrape-map url)
+      ("allure"
+       "arstechnica"
+       "brides"
+       "cntraveler"
+       "style"
+       "teenvogue"
+       "vanityfair"
+       "wired"
+       "wmagazine") (cns/scrape-map url)
       (let [raw (ice/scrape-url url)
             doc (first (yaml/parse-string raw))]
         doc))
