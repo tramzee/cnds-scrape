@@ -12,6 +12,7 @@
        "arstechnica"
        "brides"
        "cntraveler"
+       "gq"
        "style"
        "teenvogue"
        "vanityfair"
