@@ -13,9 +13,11 @@
        "brides"
        "cntraveler"
        "gq"
+       "newyorker"
        "style"
        "teenvogue"
        "vanityfair"
+       "vogue"
        "wired"
        "wmagazine") (cns/scrape-map url)
       (let [raw (ice/scrape-url url)
