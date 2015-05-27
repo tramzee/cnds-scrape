@@ -9,9 +9,12 @@
   (try
     (case (clojure.string/replace url #"^.*[/\.]([^\.]+)\.com/.*" "$1")
       ("allure"
+       "architecturaldigest"
        "arstechnica"
+       "bonappetit"
        "brides"
        "cntraveler"
+       "golfdigest"
        "gq"
        "newyorker"
        "style"
