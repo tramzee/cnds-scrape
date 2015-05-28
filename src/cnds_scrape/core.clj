@@ -18,6 +18,7 @@
        "golfdigest"
        "gq"
        "newyorker"
+       "self"
        "style"
        "teenvogue"
        "vanityfair"
