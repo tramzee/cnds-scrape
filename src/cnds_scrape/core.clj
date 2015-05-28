@@ -14,6 +14,7 @@
        "bonappetit"
        "brides"
        "cntraveler"
+       "glamour"
        "golfdigest"
        "gq"
        "newyorker"
