@@ -1,4 +1,5 @@
-(defproject cnds-scrape "0.9.0"
+(def version "0.10.0")
+(defproject cnds-scrape version
   :description "Temporary lib until cnscrape has all the scrapers"
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
@@ -7,10 +8,11 @@
   :dependencies [[org.clojure/clojure "1.7.0-alpha5"]
 
                  [circleci/clj-yaml "0.5.3"]
-                 [cnscrape "0.9.0"]
+                 [cnscrape "0.10.0"]
                  [io.cnds/ice-clj "0.0.5"]]
 
   :plugins [[lein-ancient "0.4.4"]
             [s3-wagon-private "1.1.2" :exclusions [commons-codec commons-logging]]]
 
-  :repositories [["cnds" {:url "s3p://clojars.cnds.io/cnds/releases"}]])
+  :repositories [["cnds" {:url "s3p://clojars.cnds.io/cnds/releases"}]]
+  :manifest {"Implementation-Version" ~version})
