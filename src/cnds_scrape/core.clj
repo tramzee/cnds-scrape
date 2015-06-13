@@ -1,36 +1,13 @@
 (ns cnds-scrape.core
   (:require [clj-yaml.core :as yaml]
             [cnds-scrape.version-ns :as v]
-            [cnscrape.core :as cns]
-            [ice-clj.core :as ice]))
+            [cnscrape.core :as cns]))
 
 (defn scrape-map
   "Scrape a URL"
   [url]
   (try
-    (assoc (case (clojure.string/replace url #"^.*[/\.]([^\.]+)\.com/.*" "$1")
-             ("allure"
-              "architecturaldigest"
-              "arstechnica"
-              "bonappetit"
-              "brides"
-              "cntraveler"
-              "details"
-              "glamour"
-              "golfdigest"
-              "gq"
-              "newyorker"
-              "self"
-              "style"
-              "teenvogue"
-              "vanityfair"
-              "vogue"
-              "wired"
-              "wmagazine") (cns/scrape-map url)
-             (let [raw (ice/scrape-url url)
-                   doc (first (yaml/parse-string raw))]
-               doc))
-      :_scraper_version (v/get-version))
+    (assoc (cns/scrape-map url) :_scraper_version (v/get-version))
 
     (catch java.io.FileNotFoundException e
       (println "\ncould not find URL" url))
